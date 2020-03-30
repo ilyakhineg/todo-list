@@ -1,6 +1,7 @@
-import { TODO_LIST_PENDING, TODO_LIST_FETCHED, TODO_LIST_ERROR } from "./types";
+import { TODO_LIST_PENDING, TODO_LIST_FETCHED } from "./types";
+import { initialState } from './state';
 
-export const toDoListReducer = (state, action) => {
+export const toDoListsReducer = (state = initialState, action) => {
   switch (action.type) {
     case TODO_LIST_PENDING:
       return { ...state, pending: true, fetched: false };

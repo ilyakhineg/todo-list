@@ -1,4 +1,0 @@
-import { combineReducers } from "redux";
-import { toDoListReducer } from "./todo-lists/reducer";
-
-export const rootReducers = combineReducers({todoLists: toDoListReducer});
