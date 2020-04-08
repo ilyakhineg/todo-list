@@ -1,6 +1,6 @@
 export const initialState = {
-	pending: false,
-	fetched: false,
-	data: [],
-	error: null,
+  pending: false,
+  fetched: false,
+  data: [],
+  error: null,
 };

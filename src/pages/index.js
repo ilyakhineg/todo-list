@@ -1,5 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export const MainPage = () => {
-	return <div>i`am main page!!!!</div>;
+  return <div>i`am main page!!!!</div>;
 };

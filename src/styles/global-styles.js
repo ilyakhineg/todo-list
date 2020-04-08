@@ -1,3 +1,3 @@
-import { baseStyles } from './common/base';
+import { baseStyles } from "./common/base";
 
 export const globalStyles = [baseStyles];

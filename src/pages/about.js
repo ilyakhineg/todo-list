@@ -1,5 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export const AboutPage = () => {
-	return <div>i`am about page</div>;
+  return <div>i`am about page</div>;
 };
