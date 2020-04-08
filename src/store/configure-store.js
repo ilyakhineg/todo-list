@@ -1,10 +1,4 @@
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import { rootReducers } from "./root-reducers";
+import { configureStoreProd } from './configure-store.prod';
+import { configureStoreDev } from './configure-store.dev';
 
-export function configureStore() {
-  const middlewares = [thunk];
-  const middlewareEnhancer = applyMiddleware(...middlewares);
-  const store = createStore(rootReducers, middlewareEnhancer);
-  return store;
-}
+export const configureStore = process.env.NODE_ENV === 'production' ? configureStoreProd : configureStoreDev;
