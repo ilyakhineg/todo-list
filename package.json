@@ -23,9 +23,25 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "prettier \"./src/**/*.{js,json}\" --write",
-    "lint:stylelint": "stylelint 'src/**/*.{css,js,jsx}'",
-    "fix:stylelint": "stylelint 'src/**/*.{js,jsx,css}' --fix"
+    "prettier:check": "prettier --config ./.prettierrc --list-different \"src/**/*{.js,.jsx,.json}\"",
+    "prettier:fix": "prettier --config ./.prettierrc --write \"src/**/*{.js,.jsx,.json,.css}\"",
+    "lint:js": "eslint \"./src/**/*.{js,jsx}\"",
+    "lint:styles": "stylelint  \"./src/**/*.{js,jsx,css}\"",
+    "lint:all": "npm run prettier:check && npm run lint:styles && npm run lint:js",
+    "fix:js": "eslint 'src/**/*.{js,jsx}' --fix",
+    "fix:stylelint": "stylelint 'src/**/*.{js,jsx,pcss}' --fix",
+    "fix:all": "npm run fix:js && npm run prettier:fix && npm run fix:stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && git add",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint:all"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,6 +67,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "husky": "^4.2.3",
     "prettier": "2.0.4",
     "stylelint": "^13.3.0",
     "stylelint-config-prettier": "^8.0.1",

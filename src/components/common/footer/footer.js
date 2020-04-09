@@ -1,20 +1,20 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
 const StyledFooter = styled.footer`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 50px;
-  background-color: #ec9a89;
-  color: #ffffff;
-  font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 50px;
+	color: #fff;
+	font-size: 20px;
+	background-color: #ec9a89;
 `;
 
 export const Footer = () => {
-  return (
-    <StyledFooter>
-      <div>footer</div>
-    </StyledFooter>
-  );
+	return (
+		<StyledFooter>
+			<div>footer</div>
+		</StyledFooter>
+	);
 };
