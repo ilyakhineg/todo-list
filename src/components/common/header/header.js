@@ -8,7 +8,7 @@ const StyledHeader = styled.header`
 	justify-content: space-between;
 	width: 100%;
 	height: 50px;
-	color: #000000;
+	color: #000;
 	font-size: 20px;
 	background-color: #afd79f;
 `;
@@ -20,7 +20,8 @@ const StyledUl = styled.ul`
 `;
 const StyledLi = styled.li`
 	margin: 0 10px;
-	font: bold 20px/2.5 sans-serif;
+	font: 20px/2.5 sans-serif;
+	font-weight: 600;
 	text-transform: uppercase;
 	list-style: none;
 `;

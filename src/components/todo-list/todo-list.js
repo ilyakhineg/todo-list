@@ -1,7 +1,7 @@
+import styled from '@emotion/styled';
 import React, { useState, useEffect } from 'react';
 import { ToDoListItem } from './todo-list-item';
 import { ToDoListAddTask } from './todo-list-add-task';
-import styled from '@emotion/styled';
 
 export const ToDoList = () => {
 	const [state, setState] = useState([]);
@@ -15,7 +15,7 @@ export const ToDoList = () => {
 		];
 
 		setState([...state, ...data]);
-	}, []);
+	}, [state]);
 
 	const addTask = value => {
 		const obj = { id: Date.now(), name: value };

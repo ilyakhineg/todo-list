@@ -1,9 +1,8 @@
 import React from 'react';
-import { Header } from '../header';
-import { Footer } from '../footer';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { default } from 'react-redux/lib/utils/Subscription';
+import { Header } from '../header';
+import { Footer } from '../footer';
 
 const commonStyles = css`
 	box-sizing: border-box;
@@ -12,7 +11,7 @@ const commonStyles = css`
 `;
 
 const StyledMain = styled.main`
-	${commonStyles}
+	${commonStyles};
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -22,7 +21,6 @@ const StyledMain = styled.main`
 `;
 
 export const Layout = ({ children }) => {
-	console.log('1');
 	return (
 		<div>
 			<Header />

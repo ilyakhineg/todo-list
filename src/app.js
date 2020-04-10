@@ -8,7 +8,7 @@ import { globalStyles } from './styles/global-styles';
 
 const store = configureStore();
 
-function App() {
+export function App() {
 	return (
 		<Provider store={store}>
 			<Global styles={globalStyles} />
@@ -16,5 +16,3 @@ function App() {
 		</Provider>
 	);
 }
-
-export default App;

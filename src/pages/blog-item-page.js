@@ -8,16 +8,17 @@ const PostBody = styled.div`
 	flex-direction: column;
 	width: 80%;
 	height: 50%;
-	background-color: #fff;
 	padding: 30px;
+	background-color: #fff;
 	border: 3px solid #fe8c04;
 	border-radius: 8px;
 `;
 const PostTitle = styled.div`
 	display: block;
-	text-transform: uppercase;
-	font: bold 20px/1 sans-serif;
 	margin-bottom: 20px;
+	font: 20px/1 sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
 `;
 const Loading = styled.img`
 	height: 150px;
@@ -49,15 +50,10 @@ export const BlogItemPage = ({ match }) => {
 			.then(resolve => {
 				setPageData(resolve);
 			})
-			.catch(error => console.log(error))
 			.finally(() => {
 				setIsLoading(false);
 			});
-
-		return () => {
-			console.log('unmount');
-		};
-	}, [setPageData, location]);
+	}, [match.params.id, setPageData, location]);
 
 	return (
 		<>

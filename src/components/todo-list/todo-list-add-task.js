@@ -9,19 +9,19 @@ const StyledDiv = styled.div`
 const StyledInput = styled.input`
 	width: 250px;
 	height: 20px;
-	border: none;
 	padding: 0 3px;
+	border: none;
 	outline: none;
 `;
 const StyledButton = styled.button`
 	margin: 0;
-	background-color: transparent;
-	border: none;
+	padding: 0 3px;
 	font-weight: 600;
 	font-size: 22px;
 	line-height: 22px;
 	text-transform: uppercase;
-	padding: 0 3px;
+	background-color: transparent;
+	border: none;
 	outline: none;
 `;
 

@@ -34,14 +34,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && git add",
-      "pre-push": "lint-staged"
+      "pre-commit": "npm run lint:all"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": [
-      "npm run lint:all"
-    ]
   },
   "eslintConfig": {
     "extends": "react-app"
